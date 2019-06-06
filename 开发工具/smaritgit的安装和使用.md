@@ -1,4 +1,4 @@
-# 目录8888
+# 目录
 1. 前言
 2. smartgit介绍
 3. smartgit安装
