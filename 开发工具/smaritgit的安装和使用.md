@@ -1,8 +1,8 @@
 # 目录
-### 1.前言
-### 2.smartgit介绍
-### 3.smartgit安装
-### 4.smartgit使用
+1. 前言
+2. smartgit介绍
+3. smartgit安装
+4. 常用命令说明
 
 
 # 1.前言
@@ -16,7 +16,7 @@
 
 
 
-# 4.命令说明
+# 4.常用命令说明
 ### 4.1 pull 与 fetch only的区别
-        fetch only 只会讲本地库所关联的远程库的commit id更新至最新(内容不会更新到最新)
-		pull 会将本地库更新至与远程库同样的内容
+* fetch only 只会讲本地库所关联的远程库的commit id更新至最新(内容不会更新到最新)
+* pull 会将本地库更新至与远程库同样的内容
