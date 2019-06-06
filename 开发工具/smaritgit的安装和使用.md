@@ -12,4 +12,11 @@
   smartgit其实只是git的图形化界面，原来的git使用要使用命令行进行检出、提交等操作，相对比较麻烦；所以采用可视化的图形界面让开发人员能够一目了然的进行代码管理，把更多的时间放在代码开发上
 
 # 3.smartgit安装
-  在链接https://www.syntevo.com/smartgit/download/上下载对应的安装文件进行安装
+  在链接https://www.syntevo.com/smartgit/download/ 上下载对应的安装文件进行安装
+
+
+
+# 4.命令说明
+### 4.1 pull 与 fetch only的区别
+        fetch only 只会讲本地库所关联的远程库的commit id更新至最新(内容不会更新到最新)
+		pull 会将本地库更新至与远程库同样的内容
