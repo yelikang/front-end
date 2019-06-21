@@ -76,10 +76,23 @@
 返回 1，就是让 value2 排在 value1 前面  
 返回 0，保持原来 value 和 value2 的位置不变  
 
-6. 操作数组，返回新数组的方法
+6. 操作方法
 * concat方法  
   concat方法会在当前数组的后面加上新的数组(或单个对象)，并将添加了新数组(或单个对象)的数组作为返回值
   > var list = [1,2]
   > var list2 =  list.concat(3)// [1,2,3] 添加单个对象  
   > var list3 = list2.concat([4,5])//[1,2,3,4] 添加数组  
   > console.log(list) //[1,2] 原数组不受影响
+
+* slice方法  
+  slice方法会从当前数组中截取一部分作为新的数组，接收两个参数，即数组的起始位置、结束位置(包含起始、不包含结束位置)，如果不传第二个参数,即代表截取后面的所有对象
+  > var list =[1,2,3,4]  
+  > var list2 = list.slice(1);//[2,3,4]
+  > var list3  = list.slice(1,2);//[2]
+  
+* splice方法
+  从字面上理解splice代表"剪接"，意思是将原数组剪掉一部分作为返回的新数组，然后原数组再接入一部分。splice(arrayIndex,removeNumber,item1,item2,...),第一个参数代表从数组的哪个索引位置进行剪切、removeNumber代表剪掉几个元素、后面的N个参数表示要接入到原数组中的多个对象
+  > var list = [1,2,3,4]  
+  > var list2  = list.splice(0,1);//list:[2,3,4]、list2:[1] 删除数组的第一个元素  
+  > var list3 = list.splice(1,0,'a','b');//list:[2,'a','b',3,4]、list3:[] 从数组的索引为1的位置开始添加两个对象   
+  > var list4 = list.splice(1,1,'c','d');//list:[2,'c','d','b',3,4]、list4:['a'] 删除一项，插入两项
