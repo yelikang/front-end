@@ -182,7 +182,7 @@
     ```
 
 9. 归并方法  
-   <font color="red">reduce</font>:迭代数组的每一项，构建一个最终的返回值
+   <font color="red">reduce</font>:迭代数组的每一项，构建一个最终的返回值  
    <font color="red">reduceRight</font>:与reduce相反，从右边开始
     ```
     var list = [1,2,3,4]
