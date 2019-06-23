@@ -51,7 +51,7 @@
     var list = [1,2,3]
     list.toString();//'1,2,3' toString 方法
     list.valueOf();//'1,2,3' valueOf 方法
-    list.join();//'1,2,3' <font color="red">join</font> 方法,将数组以什么分隔符转换成字符串，不传参数或者传 undefined 默认是‘,’逗号作为分隔符
+    list.join();//'1,2,3' join 方法,将数组以什么分隔符转换成字符串，不传参数或者传 undefined 默认是‘,’逗号作为分隔符
     > list.join('|');//'1|2|3'
     ```
 
@@ -74,17 +74,20 @@
 
 ```
     var list = [1];
-    list.unshift(3,2);//[3,2,1] <font color="red">unshift</font>在头部添加对象
+    list.unshift(3,2);//[3,2,1] unshift在头部添加对象
     list.pop();//[3,2] 在尾部移除对象
 ```
 
-5.  排序方法
+5.  排序方法  
+    <font color="red">reverse</font> 方法将数组进行反转  
+    <font color="red">sort</font> 方法按升序进行数组的重排,可以接受自定义的函数作为参数，进行对比
+
     ```
     var list =[1,2,3,4,5]
-    list.reverse();//[5,4,3,2,1] <font color="red">reverse</font> 方法将数组进行反转
+    list.reverse();//[5,4,3,2,1] 
     list = [0,1,5,10,15]
-    list.sort();//[0,1,10,15,5] <font color="red">sort</font> 方法按升序进行数组的重排，但是它默认比较的是将各个项调用 toString()方法之后的字符串,而字符串'10'位于字符串'5'的签名，所以就排在它的前面
-    list.sort(compare);//[0,1,5,10,15] sort 可以接受自定义的函数作为参数，进行对比
+    list.sort();//[0,1,10,15,5] 默认比较的是将各个项调用 toString()方法之后的字符串,而字符串'10'位于字符串'5'的签名，所以就排在它的前面
+    list.sort(compare);//[0,1,5,10,15] sort接受自定义的函数，进行对比
     function compare(value1,value2){
          if(vaule1<value2){
           return -1;
