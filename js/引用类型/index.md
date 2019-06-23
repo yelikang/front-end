@@ -148,3 +148,12 @@
     list = [2,4,6]
     flag = list.every(item=>item%2===0);//true
     ```
+- filter():返回每项返回true的元素组成的数组
+    ```
+    var list = [1,2,3,4]
+    var filterList = list.filter(item=>{
+        return item%2===0'
+    })
+    console.log(filterList);//[2,4] 返回值是2的倍数的每项组成的数组
+    ```
+- forEach():
