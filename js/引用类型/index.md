@@ -152,8 +152,43 @@
     ```
     var list = [1,2,3,4]
     var filterList = list.filter(item=>{
-        return item%2===0'
+        return item%2===0
     })
     console.log(filterList);//[2,4] 返回值是2的倍数的每项组成的数组
     ```
-- forEach():
+- forEach():获取数组的每一项，没有返回值
+   ```
+   var list = [1,2,3,4]
+   list.forEach(item=>{
+       console.log(item)//1,2,3,4
+   })
+   ```
+- map():获取数组每一项，返回处理之后的每一项组成的数组
+   ```
+    var list = [1,2,3,4]
+    var newList = list.map(item=>{
+        return iten=item+1;
+    })
+    console.log(newList);//[2,3,4,5]
+   ```
+
+- some():如果数组有一项返回true,那么返回结果就是true
+    ```
+    var list = [1,2,3,4]
+    var flag = list.some(item=>{
+        return item>3;//判断数组中是否有大于3的项
+    })
+    console.log(flag);//true
+    ```
+
+9. 归并方法  
+   <font color="red">reduce</font>:迭代数组的每一项，构建一个最终的返回值
+   <font color="red">reduceRight</font>:与reduce相反，从右边开始
+    ```
+    var list = [1,2,3,4]
+    var total = list.reduce((prev,cur)=>{
+        return prev + cur
+    })
+    console.log(total);//10
+
+    ```
