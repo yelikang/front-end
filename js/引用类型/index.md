@@ -1,4 +1,7 @@
 # 引用类型
+1. Object类型
+2. Array类型
+3. Date类型
 
 ## Object 类型
 
@@ -54,6 +57,13 @@
     list.join();//'1,2,3' join 方法,将数组以什么分隔符转换成字符串，不传参数或者传 undefined 默认是‘,’逗号作为分隔符
     > list.join('|');//'1|2|3'
     ```
+注意:与join想法的一个函数时字符串的split方法，该方法按字符串中的某个字符将字符串切割成数组
+```
+var str = 'red,green,yellow'
+var list = str.split(',')
+console.log(list);//['red','green','yellow']
+
+```
 
 3. 栈方法(栈是一种 LIFO(Last-In-First-Out 后进先出)的数据结构)，为了让数组也实现栈的功能，专门为其提供了 <font color="red">push()</font>和 <font color="red">pop()</font> 的方法
 
@@ -192,3 +202,37 @@
     console.log(total);//10
 
     ```
+
+## Date类型
+```
+var currentDate = new Date();//不传参数代表当前时间
+var currentDate2 = Date.now();//使用now方法直接获取当前时间(IE9以上支持)
+```
+
+## RegExp类型
+
+## Function类型
+* prototype属性:prototype是最耐人寻味的属性，它保存的是所有实例方法；例如toString()和valueOf()等都保存在prototype名下。
+
+## 基本类型的包装-包装类型
+*  String: var str = new String('hhh')
+*  Boolean: var flag = new Boolean(true);
+*  Number: var number = new Number(15)  
+注意:使用包装类型创建的基本类型对象与直接定义基本类型是不一样的:
+```
+var number = 12;
+console.log(typeof number);//'number'
+
+var number2 = new Number(12)
+console.log(typeof number2);//'object'
+=========================================
+var falseObject = new Boolean(false)
+var result = falseObject && true
+console.log(result);//true
+
+var falseVlaue = false
+result = falseValue && true;
+console.log(result);//false
+
+
+```
