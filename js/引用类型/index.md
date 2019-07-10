@@ -55,9 +55,9 @@
     list.toString();//'1,2,3' toString 方法
     list.valueOf();//'1,2,3' valueOf 方法
     list.join();//'1,2,3' join 方法,将数组以什么分隔符转换成字符串，不传参数或者传 undefined 默认是‘,’逗号作为分隔符
-    > list.join('|');//'1|2|3'
+    list.join('|');//'1|2|3'
     ```
-注意:与join想法的一个函数时字符串的split方法，该方法按字符串中的某个字符将字符串切割成数组
+注意:与join相反的一个函数时字符串的split方法，该方法按字符串中的某个字符将字符串切割成数组
 ```
 var str = 'red,green,yellow'
 var list = str.split(',')
@@ -233,6 +233,5 @@ console.log(result);//true
 var falseVlaue = false
 result = falseValue && true;
 console.log(result);//false
-
 
 ```
