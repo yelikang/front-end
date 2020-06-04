@@ -1,7 +1,8 @@
 # 引用类型
-1. Object类型
-2. Array类型
-3. Date类型
+
+1. Object 类型
+2. Array 类型
+3. Date 类型
 
 ## Object 类型
 
@@ -41,23 +42,25 @@
 
 ### 数组的一些方法
 
-1. 数组检查方法
+1.  数组检查方法
 
     ```
     var list = []
     Array.isArray(list)//true
     ```
 
-2. 数组的转换(将数组转换成字符串)
+2.  数组的转换(将数组转换成字符串)
 
-    ```
-    var list = [1,2,3]
-    list.toString();//'1,2,3' toString 方法
-    list.valueOf();//'1,2,3' valueOf 方法
-    list.join();//'1,2,3' join 方法,将数组以什么分隔符转换成字符串，不传参数或者传 undefined 默认是‘,’逗号作为分隔符
-    list.join('|');//'1|2|3'
-    ```
-注意:与join相反的一个函数时字符串的split方法，该方法按字符串中的某个字符将字符串切割成数组
+        ```
+        var list = [1,2,3]
+        list.toString();//'1,2,3' toString 方法
+        list.valueOf();//'1,2,3' valueOf 方法
+        list.join();//'1,2,3' join 方法,将数组以什么分隔符转换成字符串，不传参数或者传 undefined 默认是‘,’逗号作为分隔符
+        list.join('|');//'1|2|3'
+        ```
+
+    注意:与 join 相反的一个函数时字符串的 split 方法，该方法按字符串中的某个字符将字符串切割成数组
+
 ```
 var str = 'red,green,yellow'
 var list = str.split(',')
@@ -94,7 +97,7 @@ console.log(list);//['red','green','yellow']
 
     ```
     var list =[1,2,3,4,5]
-    list.reverse();//[5,4,3,2,1] 
+    list.reverse();//[5,4,3,2,1]
     list = [0,1,5,10,15]
     list.sort();//[0,1,10,15,5] 默认比较的是将各个项调用 toString()方法之后的字符串,而字符串'10'位于字符串'5'的签名，所以就排在它的前面
     list.sort(compare);//[0,1,5,10,15] sort接受自定义的函数，进行对比
@@ -116,6 +119,7 @@ console.log(list);//['red','green','yellow']
 
 -   concat 方法
     concat 方法会在当前数组的后面加上新的数组(或单个对象)，并将添加了新数组(或单个对象)的数组作为返回值，返回<font color="red">新的数组</font>
+
     ```
     var list = [1,2]
     var list2 = list.concat(3)// [1,2,3] 添加单个对象
@@ -125,11 +129,12 @@ console.log(list);//['red','green','yellow']
 
 -   slice 方法
     slice 方法会从当前数组中截取一部分作为<font color="red">新的数组</font>，接收两个参数，即数组的起始位置、结束位置(包含起始、不包含结束位置)，如果不传第二个参数,即代表截取后面的所有对象
+
     ```
     var list =[1,2,3,4]
     var list2 = list.slice(1);//[2,3,4]
     var list3 = list.slice(1,2);//[2]
-    
+
     ```
 
 -   splice 方法
@@ -142,6 +147,7 @@ console.log(list);//['red','green','yellow']
     ```
 
 7. 位置方法
+
     ```
     indexOf()
     lastIndexOf()
@@ -158,7 +164,8 @@ console.log(list);//['red','green','yellow']
     list = [2,4,6]
     flag = list.every(item=>item%2===0);//true
     ```
-- filter():返回每项返回true的元素组成的数组
+
+-   filter():返回每项返回 true 的元素组成的数组
     ```
     var list = [1,2,3,4]
     var filterList = list.filter(item=>{
@@ -166,23 +173,24 @@ console.log(list);//['red','green','yellow']
     })
     console.log(filterList);//[2,4] 返回值是2的倍数的每项组成的数组
     ```
-- forEach():获取数组的每一项，没有返回值
-   ```
-   var list = [1,2,3,4]
-   list.forEach(item=>{
-       console.log(item)//1,2,3,4
-   })
-   ```
-- map():获取数组每一项，返回处理之后的每一项组成的数组
-   ```
+-   forEach():获取数组的每一项，没有返回值
+    ```
     var list = [1,2,3,4]
-    var newList = list.map(item=>{
-        return iten=item+1;
+    list.forEach(item=>{
+        console.log(item)//1,2,3,4
     })
-    console.log(newList);//[2,3,4,5]
-   ```
+    ```
+-   map():获取数组每一项，返回处理之后的每一项组成的数组
 
-- some():如果数组有一项返回true,那么返回结果就是true
+    ```
+     var list = [1,2,3,4]
+     var newList = list.map(item=>{
+         return iten=item+1;
+     })
+     console.log(newList);//[2,3,4,5]
+    ```
+
+-   some():如果数组有一项返回 true,那么返回结果就是 true
     ```
     var list = [1,2,3,4]
     var flag = list.some(item=>{
@@ -193,7 +201,8 @@ console.log(list);//['red','green','yellow']
 
 9. 归并方法  
    <font color="red">reduce</font>:迭代数组的每一项，构建一个最终的返回值
-   <font color="red">reduceRight</font>:与reduce相反，从右边开始
+   <font color="red">reduceRight</font>:与 reduce 相反，从右边开始
+
     ```
     var list = [1,2,3,4]
     var total = list.reduce((prev,cur)=>{
@@ -203,22 +212,26 @@ console.log(list);//['red','green','yellow']
 
     ```
 
-## Date类型
+## Date 类型
+
 ```
 var currentDate = new Date();//不传参数代表当前时间
 var currentDate2 = Date.now();//使用now方法直接获取当前时间(IE9以上支持)
 ```
 
-## RegExp类型
+## RegExp 类型
 
-## Function类型
-* prototype属性:prototype是最耐人寻味的属性，它保存的是所有实例方法；例如toString()和valueOf()等都保存在prototype名下。
+## Function 类型
+
+-   prototype 属性:prototype 是最耐人寻味的属性，它保存的是所有实例方法；例如 toString()和 valueOf()等都保存在 prototype 名下。
 
 ## 基本类型的包装-包装类型
-*  String: var str = new String('hhh')
-*  Boolean: var flag = new Boolean(true);
-*  Number: var number = new Number(15)  
-注意:使用包装类型创建的基本类型对象与直接定义基本类型是不一样的:
+
+-   String: var str = new String('hhh')
+-   Boolean: var flag = new Boolean(true);
+-   Number: var number = new Number(15)  
+    注意:使用包装类型创建的基本类型对象与直接定义基本类型是不一样的:
+
 ```
 var number = 12;
 console.log(typeof number);//'number'
