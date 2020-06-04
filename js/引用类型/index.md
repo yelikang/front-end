@@ -248,4 +248,4 @@ result = falseValue && true;
 console.log(result);//false
 
 ```
-test13
+test14
